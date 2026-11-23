@@ -1,0 +1,47 @@
+# ── Secrets / env ─────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── Python ────────────────────────────────────
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+build/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# ── Node / frontend ───────────────────────────
+node_modules/
+dist/
+.vite/
+coverage/
+*.tsbuildinfo
+npm-debug.log*
+yarn-error.log*
+
+# ── Runtime data ──────────────────────────────
+.workspaces/
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+/data/
+*.log
+
+# ── Claude Code (personal settings) ───────────
+.claude/settings.local.json
+
+# ── Editors / OS ──────────────────────────────
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db

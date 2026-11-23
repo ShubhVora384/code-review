@@ -1,0 +1,16 @@
+line-length = 100
+target-version = "py312"
+
+[lint]
+select = ["E", "F", "W", "I", "UP", "B", "C4", "SIM", "RUF"]
+ignore = [
+    "E501",    # line length is handled by the formatter
+    "B008",    # FastAPI's Depends() in defaults is idiomatic
+    "RUF012",  # ClassVar annotations on agent config attrs add noise
+]
+
+[lint.per-file-ignores]
+"tests/*" = ["S101"]
+# The report renderer emits real typography (en dashes in line ranges).
+"app/api/v1/report.py" = ["RUF001"]
+"alembic/*" = ["ALL"]
